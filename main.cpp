@@ -9,7 +9,7 @@ node* dat;
 void freeTop(node* total){
     total=total->next;
     while(total!=nullptr){
-        total->prev->next=nullptr;//удлить ссылку на текущий узел
+        total->prev->next=nullptr;
         total->prev=nullptr;
         total=total->next;
     }
@@ -21,8 +21,6 @@ node* getTop(node* total){
 }
 int main()
 {
-    cintream cin("in.txt");
-    couttream cout("out.txt");
     int n,a,b;
     cin>>n;
     dat=new node[n];
@@ -88,7 +86,7 @@ int main()
                 total=total->next;
             }
         }
-            cout<<'\n';
+        cout<<'\n';
     }
     return 0;
 }
