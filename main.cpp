@@ -76,10 +76,8 @@ int main()
         cin>>coms[0];
     }
    for(int i=0;i<n;i++){
-        if(dat[i].prev!=nullptr)
-            cout<<i<<":";
-        else{
-            cout<<i<<":";
+        cout<<i<<":";
+        if(dat[i].prev==nullptr){
             node* total=&dat[i];
             while(total!=nullptr){
                 cout<<" "<<total->value;
